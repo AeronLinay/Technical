@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" type="text/css" href="op.css">
+</head>
+<body>
+    <html lang="en">
+  
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+  
+<body>
+    <div class="main-body">
+        <nav id="navbar">
+            <header>Documentation Menu</header>
+            <a href="#What_is_Python?" class="nav-link">
+                What is Python?</a>
+            <a href="#Python_File_Handling" class="nav-link">
+                Python File Handling</a>
+            <a href="#Python_File_Reading" class="nav-link">
+                Python File Reading</a>
+            <a href="#Python_Write/Create_Files" class="nav-link">
+                Python Write/Create Files</a>
+            <a href="#Python_Delete_Files" class="nav-link">
+                Python Delete Files</a>
+        </nav>
+  
+        <main id="main-doc">
+            <section class="main-section" id="What_is_Python?">
+                <header>
+                    What is Python?
+                </header>
+                <p>
+                    Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.
+                </p>
+                <p>he “Hello World” program is the first
+                    step towards learning any programming
+                    language and also one of the simplest
+                    programs you will learn. All you have
+                    to do is display the message “Hello World”
+                    on the screen.
+                    <br><br>Let us now look at the program :<br>
+                </p>
+                <code>
+                    print("Hello, World!")
+                </code>
+                <br>
+                <p>Python can be used on a server to create web applications.
+                    <br> 
+                </p>
+                <ul>
+                    
+                    <li>Python_File_Handling</li>
+                    <li>Python_File_Reading</li>
+                    <li>Python_Write/Create_Files</li>
+                    <li>Python_Delete_Files</li>
+                  
+                    
+                </ul>
+            </section>
+          
+  
+            <section class="main-section" id="Python_File_Handling">
+                <header>
+                    Python File Handling
+                </header>
+                <p>
+                    File handling is an important part of any web application.
+
+Python has several functions for creating, reading, updating, and deleting files.
+                </p>
+                <p><b>File Handling : </b><p>The key function for working with files in Python is the open() function.</p>
+
+              <p>The open() function takes two parameters; filename, and mode.</p>
+
+<p>There are four different methods (modes) for opening a file:</p>
+
+<p>"r" - Read - Default value. Opens a file for reading, error if the file does not exist</p>
+
+<p>"a" - Append - Opens a file for appending, creates the file if it does not exist</p>
+
+<p>"w" - Write - Opens a file for writing, creates the file if it does not exist</p>
+
+<p>"x" - Create - Creates the specified file, returns an error if the file exists</p>
+
+<p>In addition you can specify if the file should be handled as binary or text mode</p>
+
+<p>"t" - Text - Default value. Text mode</p>
+
+<p>"b" - Binary - Binary mode (e.g. images)</p>
+
+<p>Syntax</p>
+<p>To open a file for reading it is enough to specify the name of the file:</p>
+
+<code>f = open("demofile.txt")</code>
+<p>The code above is the same as:</p>
+
+<code>f = open("demofile.txt", "rt")</code>
+<p>Because "r" for read, and "t" for text are the default values, you do not need to specify them.</p>
+                  
+                    <br>
+                </p>
+            </section>
+  
+            <section class="main-section" id="Python_File_Reading">
+                <header>
+                    Python File Reading
+                </header>
+                <p>
+                    Python can be used in database applications.
+
+One of the most popular databases is MySQL.
+                </p>
+                <p> 
+                    <b>Open a File on the Server : </b><br><br>
+  
+                    <b>Assume we have the following file, located in the same folder as Python:</b>To open the file, use the built-in open() function.
+
+The open() function returns a file object, which has a read() method for reading the content of the file:
+
+<code>
+f = open("demofile.txt", "r")
+  print(f.read())</code>
+                  <p>If the file is located in a different location, you will have to specify the file path, like this:</p>
+
+              <p>Open a file on a different location:</p>
+
+<code>f = open("D:\\myfiles\welcome.txt", "r")
+  print(f.read())</code>
+                    <br><br>
+                    <b>Read Only Parts of the File: </b>By default the read() method returns the whole text, but you can also specify how many characters you want to return:
+
+              <p>Example</p>
+              <p>Return the 5 first characters of the file:</p>
+
+<code>f = open("demofile.txt", "r")
+  print(f.read(5))</code>
+                    <br><br>
+                    <b>Read Lines : </b>You can return one line by using the readline() method:
+
+<p>Example:</p>
+<p>Read one line of the file:</p>
+
+<code>f = open("demofile.txt", "r")
+print(f.readline())</code>
+<p>By calling readline() two times, you can read the two first lines:</p>
+
+<p>Example:</p>
+<p>Read two lines of the file:</p>
+
+<code>f = open("demofile.txt", "r")
+print(f.readline())
+print(f.readline())</code>
+<p>By looping through the lines of the file, you can read the whole file, line by line:</p>
+
+<p>Example:</p>
+<p>Loop through the file line by line:</p>
+
+<code>f = open("demofile.txt", "r")
+for x in f:
+  print(x)</code>
+              <b>Close Files: </b>It is a good practice to always close the file when you are done with it.
+
+<p>Example</p>
+<p>Close the file when you are finish with it:</p>
+
+<code>f = open("demofile.txt", "r")
+print(f.readline())
+f.close()</code>
+
+                    <br><br>
+              <section class="main-section" id="Python_Write/Create_Files">
+                    <header>Python Write/Create Files: </header>
+                    <br><br><br>
+                    <b>Write to an Existing File:</b> To write to an existing file, you must add a parameter to the open() function:
+
+<p>"a" - Append - will append to the end of the file</p>
+
+<p>"w" - Write - will overwrite any existing content</p>
+
+<p>Example</p>
+<p>Open the file "demofile2.txt" and append content to the file:</p>
+
+<code>f = open("demofile2.txt", "a")
+f.write("Now the file has more content!")
+f.close()</code>
+
+<code>#open and read the file after the appending:
+f = open("demofile2.txt", "r")
+print(f.read())</code>
+              <p>Example</p>
+<p>Open the file "demofile3.txt" and overwrite the content:</p>
+
+<code>f = open("demofile3.txt", "w")
+f.write("Woops! I have deleted the content!")
+  f.close()</code>
+
+<code>#open and read the file after the appending:
+f = open("demofile3.txt", "r")
+print(f.read())</code>
+                    <br><br>
+                    <b>Create a New File:</b> To create a new file in Python, use the open() method, with one of the following parameters:
+
+<p>"x" - Create - will create a file, returns an error if the file exist</p>
+
+<p>"a" - Append - will create a file if the specified file does not exist</p>
+
+<p>"w" - Write - will create a file if the specified file does not exist</p>
+
+<p>Example</p>
+<p>Create a file called "myfile.txt":</p>
+
+<code>f = open("myfile.txt", "x")
+  Result: a new empty file is created!</code>
+
+<p>Example</p>
+<p>Create a new file if it does not exist:</p>
+
+<code>f = open("myfile.txt", "w")</code>
+                    <br><br>
+                    
+                </p>
+            </section>
+  
+            <section class="main-section" id="Python_Delete_Files">
+                <header>
+                    Python Delete a File
+                </header>
+                <p>
+                    Tutorial on how to delete files using Python.
+                    <br>
+                    <b>Delete a File</b>
+                    <br> To delete a file, you must import the OS module, and run its os.remove() function:</br>
+                    <p>Example</p>
+<p>Remove the file "demofile.txt":</p>
+
+<code>import os
+             os.remove("demofile.txt")</code>
+                </p>
+              <b>Check if File exist:</b>
+                    <br> To avoid getting an error, you might want to check if the file exists before you try to delete it:</br>
+                    <li>Example<li>
+<p>Check if file exists, then delete it::<p>
+
+<code>import os
+if os.path.exists("demofile.txt"):
+  os.remove("demofile.txt")
+else:
+  print("The file does not exist")</code>
+                </p>
+              <b>Delete Folder:</b>
+                    <br> To delete an entire folder, use the os.rmdir() method:<br>
+                    <li>Example</li>
+<p>Remove the folder "myfolder":</p>
+
+<code>import os
+os.rmdir("myfolder")</code>
+                </p>
+  
+                
+            </section>
+        </main>
+    </div>
+</body>
+  
+</html>
+
+</body>
+</html>
